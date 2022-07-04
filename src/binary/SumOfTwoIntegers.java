@@ -1,4 +1,4 @@
-package arrays;
+package binary;
 
 public class SumOfTwoIntegers {
 
