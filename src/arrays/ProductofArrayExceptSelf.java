@@ -9,7 +9,8 @@ public class ProductofArrayExceptSelf {
 		ProductofArrayExceptSelf obj = new ProductofArrayExceptSelf();
 		
 		int[] nums = {1,2,3,4};
-		System.out.println(Arrays.toString(obj.productExceptSelf(nums))); // should return [24, 12, 8, 6]
+//		System.out.println(Arrays.toString(obj.productExceptSelf(nums))); // should return [24, 12, 8, 6]
+		System.out.println(Arrays.toString(obj.productExceptSelf(new int[] {-1,1,0,-3,3}))); // should return [0,0,9,0,0]
 	}
 
 	public int[] productExceptSelf(int[] nums) {
