@@ -4,13 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DecodeWays {
+	
+	Map<Integer, Integer> dp = new HashMap<>();
 
 	public static void main(String[] args) {
 		System.out.println(new DecodeWays().numDecodings("1201234")); // should return 2
 	}
 
 	public int numDecodings(String s) {
-		Map<Integer, Integer> dp = new HashMap<>();
 		dp.put(s.length(), 1);
 		
 		for(int i = s.length() - 1; i >= 0; i--) {
