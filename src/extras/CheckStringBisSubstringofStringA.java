@@ -6,7 +6,7 @@ import java.util.Map;
 public class CheckStringBisSubstringofStringA {
 
 	public static void main(String[] args) {
-		System.out.println(check("apple", "ppl")); // should return true
+		System.out.println(check("apple", "pppl")); // should return true
 	}
 
 	public static boolean check(String a, String b) {
