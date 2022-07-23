@@ -1,1 +1,1 @@
-# blind-75-leetcode
+# b75-algorithms
