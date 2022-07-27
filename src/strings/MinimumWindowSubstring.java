@@ -31,7 +31,7 @@ public class MinimumWindowSubstring {
 			char c = s.charAt(r);
 			window.put(c, window.getOrDefault(c, 0) + 1);
 			
-			if(countT.containsKey(c) && window.get(c) == countT.get(c))
+			if(countT.containsKey(c) && window.get(c).equals(countT.get(c)))
 				have += 1;
 			
 			while(have == need) {
