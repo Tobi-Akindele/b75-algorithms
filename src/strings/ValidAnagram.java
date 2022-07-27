@@ -13,21 +13,16 @@ public class ValidAnagram {
 		if (s.length() != t.length())
 			return false;
 
-		Map<Character, Integer> alphabets = new HashMap<>();
-		for (char c : s.toCharArray()) {
-			alphabets.put(c, alphabets.getOrDefault(c, 0) + 1);
+		Map<Character, Integer> sMap = new HashMap<>();
+		Map<Character, Integer> tMap = new HashMap<>();
+		for (int i = 0; i < s.length(); i++) {
+			sMap.put(s.charAt(i), sMap.getOrDefault(s.charAt(i), 0) + 1);
+			tMap.put(t.charAt(i), tMap.getOrDefault(t.charAt(i), 0) + 1);
 		}
 
-		for (char c : t.toCharArray()) {
-			if (alphabets.containsKey(c)) {
-				if (alphabets.getOrDefault(c, 0) == 0) {
-					return false;
-				} else {
-					alphabets.put(c, alphabets.get(c) - 1);
-				}
-			} else {
+		for (char c: s.toCharArray()) {
+			if(!sMap.get(c).equals(tMap.getOrDefault(c, 0)))
 				return false;
-			}
 		}
 		return true;
 	}
