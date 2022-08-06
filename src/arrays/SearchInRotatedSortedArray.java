@@ -19,16 +19,17 @@ public class SearchInRotatedSortedArray {
 			if (nums[mid] == target)
 				return mid;
 
+			// check if in the left sorted portion
 			if (nums[left] <= nums[mid]) {
-				if (target > nums[mid] || target < nums[left]) {
+				if (target > nums[mid] || target < nums[left]) {// search right
 					left = mid + 1;
-				} else {
+				} else { // search left
 					right = mid - 1;
 				}
-			} else {
-				if (target < nums[mid] || target > nums[right]) {
+			} else { // right sorted portion
+				if (target < nums[mid] || target > nums[right]) { // search left
 					right = mid - 1;
-				} else {
+				} else {// search right
 					left = mid + 1;
 				}
 			}
