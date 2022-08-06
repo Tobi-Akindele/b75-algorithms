@@ -10,7 +10,7 @@ public class ContainsDuplicate {
 		ContainsDuplicate cd = new ContainsDuplicate();
 		
 		System.out.println("Test case one: ");
-		System.out.println(cd.containsDuplicate(new int[] {1,2,3,1})); // should return false;
+		System.out.println(cd.containsDuplicate(new int[] {1,2,3,1})); // should return true;
 		System.out.println();
 		
 		System.out.println("Test case two: ");
@@ -18,7 +18,7 @@ public class ContainsDuplicate {
 		System.out.println();
 		
 		System.out.println("Test case three: ");
-		System.out.println(cd.containsDuplicate(new int[] {1,1,1,3,3,4,3,2,4,2})); // should return false;
+		System.out.println(cd.containsDuplicate(new int[] {1,1,1,3,3,4,3,2,4,2})); // should return true;
 		System.out.println();
 	}
 
