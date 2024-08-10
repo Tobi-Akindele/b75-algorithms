@@ -35,6 +35,21 @@ public class BestTime2BuyNSellStock {
 			min = Math.min(min, prices[i]);
 		}
 		return result;
+
+
+//			int profit = 0;
+//
+//			for(int i = 0; i < prices.length; i++) {
+//				int price = prices[i];
+//				int j = i + 1;
+//				while(j < prices.length) {
+//					profit = Math.max(profit, prices[j] - price);
+//					j++;
+//				}
+//			}
+//
+//			return profit;
+
 	}
 
 //	public int maxProfit(int[] prices) { // Solution 2

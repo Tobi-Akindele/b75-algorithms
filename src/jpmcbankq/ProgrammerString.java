@@ -6,9 +6,9 @@ public class ProgrammerString {
 
 	public static void main(String[] args) {
 		System.out.println(ProgrammerString.programmerStrings("programmerxxxprozmerqgram"));
-//        System.out.println(Result.programmerStrings("progxrammerrxproxgrammer"));
-//        System.out.println(Result.programmerStrings("xprogxrmaxemrppprmmograeiruu"));
-//        System.out.println(Result.programmerStrings("programmerprogrammer"));
+        System.out.println(programmerStrings("progxrammerrxproxgrammer"));
+        System.out.println(programmerStrings("xprogxrmaxemrppprmmograeiruu"));
+        System.out.println(programmerStrings("programmerprogrammer"));
 	}
 	
 	public static int programmerStrings(String s) {
@@ -28,7 +28,7 @@ public class ProgrammerString {
         Map<Character, Integer> pMap = getConstructedProgrammerMap();
         for(int i = 0; i < s.length(); i++) {
             computeMapValue(pMap, s.charAt(i));
-            if(pMap.size() == 0) {
+            if(pMap.isEmpty()) {
                 return i + 1;
             }
         }
@@ -51,7 +51,7 @@ public class ProgrammerString {
         Map<Character, Integer> pMap = getConstructedProgrammerMap();
         for(int i = s.length() - 1; i >= 0; i--) {
             computeMapValue(pMap, s.charAt(i));
-            if(pMap.size() == 0) {
+            if(pMap.isEmpty()) {
                 return i - 1;
             }
         }

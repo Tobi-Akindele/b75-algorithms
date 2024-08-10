@@ -36,7 +36,7 @@ public class ContainsDuplicate {
 				return true;
 			}
 
-			visited.put((Integer) nums[i], (Integer) i);
+			visited.put(nums[i], i);
 		}
 		return false;
 	}

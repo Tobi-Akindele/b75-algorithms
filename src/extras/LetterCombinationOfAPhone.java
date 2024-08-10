@@ -13,7 +13,7 @@ public class LetterCombinationOfAPhone {
 	public List<String> letterCombinations(String digits) {
 		LinkedList<String> outputArr = new LinkedList<>();
 
-		if (digits.length() == 0)
+		if (digits.isEmpty())
 			return outputArr;
 
 		outputArr.add("");

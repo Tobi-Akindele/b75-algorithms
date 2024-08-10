@@ -12,25 +12,25 @@ public class TwoSum {
 		int target = 9;
 
 		System.out.println("Test case one: ");
-		System.out.println(Arrays.toString(new TwoSum().twoSum(nums, target)));
+		System.out.println(Arrays.toString(twoSum(nums, target)));
 		System.out.println();
 
 		int[] nums2 = { 3, 2, 4 };
 		int target2 = 6;
 
 		System.out.println("Test case two: ");
-		System.out.println(Arrays.toString(new TwoSum().twoSum(nums2, target2)));
+		System.out.println(Arrays.toString(twoSum(nums2, target2)));
 		System.out.println();
 
 		int[] nums3 = { 3, 3 };
 		int target3 = 6;
 
 		System.out.println("Test case three: ");
-		System.out.println(Arrays.toString(new TwoSum().twoSum(nums3, target3)));
+		System.out.println(Arrays.toString(twoSum(nums3, target3)));
 		System.out.println();
 	}
 
-	public int[] twoSum(int[] nums, int target) {
+	public static int[] twoSum(int[] nums, int target) {
 
 		if (nums.length < 2 || nums.length > 10000) {
 			return new int[] {};
