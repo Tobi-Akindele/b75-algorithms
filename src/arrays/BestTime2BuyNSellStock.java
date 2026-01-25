@@ -27,7 +27,7 @@ public class BestTime2BuyNSellStock {
 		}
 
 		int min = prices[0];
-		for (int i = 0; i < prices.length; i++) {
+		for (int i = 1; i < prices.length; i++) {
 			if (prices[i] <= 0 && prices[i] >= 10000)
 				return 0;
 

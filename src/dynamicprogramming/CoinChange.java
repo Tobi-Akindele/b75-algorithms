@@ -4,10 +4,10 @@ public class CoinChange {
 
 	public static void main(String[] args) {
 //		System.out.println(new CoinChange().coinChange(new int[] {1,2,5}, 11)); // should return 3
-		System.out.println(new CoinChange().coinChange(new int[] {2}, 3)); // should return -1
+		System.out.println(CoinChange.coinChange(new int[] {2}, 3)); // should return -1
 	}
 
-	public int coinChange(int[] coins, int amount) {
+	public static int coinChange(int[] coins, int amount) {
 		int[] dp = new int[amount + 1];
 		dp[0] = 0;
 

@@ -1,7 +1,9 @@
 package arrays;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class ContainsDuplicate {
 
@@ -11,18 +13,21 @@ public class ContainsDuplicate {
 		
 		System.out.println("Test case one: ");
 		System.out.println(cd.containsDuplicate(new int[] {1,2,3,1})); // should return true;
+		System.out.println(cd.containsDuplicateII(new int[] {1,2,3,1})); // should return true;
 		System.out.println();
 		
 		System.out.println("Test case two: ");
 		System.out.println(cd.containsDuplicate(new int[] {1,2,3,4})); // should return false;
+		System.out.println(cd.containsDuplicateII(new int[] {1,2,3,4})); // should return false;
 		System.out.println();
 		
 		System.out.println("Test case three: ");
 		System.out.println(cd.containsDuplicate(new int[] {1,1,1,3,3,4,3,2,4,2})); // should return true;
+		System.out.println(cd.containsDuplicateII(new int[] {1,1,1,3,3,4,3,2,4,2})); // should return true;
 		System.out.println();
 	}
 
-	public boolean containsDuplicate(int[] nums) {
+	public boolean containsDuplicate(int[] nums) { // Solution 1
 
 		if (nums.length <= 1 && nums.length >= 100000)
 			return false;
@@ -38,6 +43,18 @@ public class ContainsDuplicate {
 
 			visited.put(nums[i], i);
 		}
+		return false;
+	}
+
+	public boolean containsDuplicateII(int[] nums) {// Solution 2
+		Set<Integer> visited = new HashSet<>();
+
+		for (int num: nums) {
+			if (!visited.add(num)) {
+				return true;
+			}
+		}
+
 		return false;
 	}
 }

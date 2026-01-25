@@ -8,6 +8,7 @@ public class ValidPalindrome {
 	public static void main(String[] args) {
 		System.out.println();
 		System.out.println(new ValidPalindrome().isPalindrome1("A man, a plan, a canal: Panama"));
+		System.out.println(new ValidPalindrome().isPalindrome1(".,"));
 	}
 
 	// 1.

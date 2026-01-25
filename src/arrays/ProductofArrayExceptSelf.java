@@ -1,6 +1,6 @@
 package arrays;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class ProductofArrayExceptSelf {
 
@@ -10,7 +10,10 @@ public class ProductofArrayExceptSelf {
 		
 		int[] nums = {1,2,3,4};
 		System.out.println(Arrays.toString(obj.productExceptSelf(nums))); // should return [24, 12, 8, 6]
+		System.out.println(Arrays.toString(obj.productExceptSelfII(nums))); // should return [24, 12, 8, 6]
+		System.out.println();
 		System.out.println(Arrays.toString(obj.productExceptSelf(new int[] {-1,1,0,-3,3}))); // should return [0,0,9,0,0]
+		System.out.println(Arrays.toString(obj.productExceptSelfII(new int[] {-1,1,0,-3,3}))); // should return [0,0,9,0,0]
 	}
 
 	public int[] productExceptSelf(int[] nums) {
@@ -34,5 +37,25 @@ public class ProductofArrayExceptSelf {
 		}
 
 		return output;
+	}
+
+	public int[] productExceptSelfII(int[] nums) {
+		int[] result = new int[nums.length];
+		Map<Integer, List<Integer>> library = new HashMap<>();
+
+		for (int i = 0; i < nums.length; i++) {
+			library.put(i, new ArrayList<>());
+			for (int j = 0; j < nums.length; j++) {
+				if (i != j) {
+					library.get(i).add(nums[j]);
+				}
+			}
+		}
+
+		for (int i = 0; i < library.size(); i++) {
+			result[i] = library.get(i).stream().reduce(1, (a, b) -> a * b);
+		}
+
+		return result;
 	}
 }
